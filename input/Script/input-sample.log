@@ -1,0 +1,16 @@
+12313 Boilerplate info field 1: Foofoo
+12314 LOAD
+12315     *
+12316 FROM [lib://CRM/Customer.qvd] (qvd);
+12317 3 fields loaded: Person ID, Last Name, First Name, Country
+12318 Let vFoo = 'vBar';
+12319 LOAD
+12320     "Person ID",
+12321     "Address Line 1",
+12322     "Address Line 2",
+12323     "City",
+12324     "State",
+12325     "Zip" AS "Zip Code"
+12326 FROM [lib://CRM/Customer Address.qvd] (qvd);
+12327 6 fields loaded: Person ID, Address Line 1, Address Line 2, City,
+12328 State, Zip Code.
