@@ -1,16 +1,28 @@
 12313 Boilerplate info field 1: Foofoo
-12314 LOAD
-12315     *
-12316 FROM [lib://CRM/Customer.qvd] (qvd);
-12317 3 fields loaded: Person ID, Last Name, First Name, Country
-12318 Let vFoo = 'vBar';
-12319 LOAD
-12320     "Person ID",
-12321     "Address Line 1",
-12322     "Address Line 2",
-12323     "City",
-12324     "State",
-12325     "Zip" AS "Zip Code"
-12326 FROM [lib://CRM/Customer Address.qvd] (qvd);
-12327 6 fields loaded: Person ID, Address Line 1, Address Line 2, City,
-12328 State, Zip Code.
+12314 [Customer]:
+12315 LOAD
+12316     *
+12317 FROM [lib://CRM/Customer.qvd] (qvd);
+12318 3 fields loaded: Customer ID, Last Name, First Name, Country,
+12319 Let vFoo = 'vBar';
+12320 [Customer Address]:
+12321 LOAD
+12322     "Customer ID",
+12323     "Address Line 1",
+12324     "Address Line 2",
+12325     "City ID",
+12326     "State ID",
+12327     "Zip" AS "Zip Code",
+12328     "Country ID"
+12329 FROM [lib://CRM/Customer Address.qvd] (qvd);
+12330 6 fields loaded: Customer ID, Address Line 1, Address Line 2, City ID,
+12331 State ID, Zip Code. Country ID,
+12332 [Order]:
+12333 Load
+12334     [ID] AS [Order ID],
+12335     [Product ID],
+12336     [Customer ID],
+12337     [Order Total Amount]
+12338 From [lib://POS/Order Header.qvd] (qvd);
+12339 4 fields loaded: Order ID, Product ID, Customer ID, Order Total Amount,
+12340 Store [Order] Into [lib://Warehouse - Facts/Order.qvd] (qvd);
