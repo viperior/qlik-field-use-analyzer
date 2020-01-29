@@ -1,0 +1,1 @@
+[{"file_metadata": {"file_number": 1, "file_directory": "./input/Script/", "file_name": "input-sample.log", "file_path": "./input/Script/input-sample.log"}, "load_statement_line_ranges": [{"statement_description": "Load statement", "start_line_number": 3, "end_line_number": 5}, {"start_line_number": 9, "end_line_number": 17}, {"start_line_number": 21, "end_line_number": 26}]}]
