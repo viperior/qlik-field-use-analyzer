@@ -1,6 +1,6 @@
 import json, os, re
 
-def analyze_logs(qlik_script_directory='./input/Script/', log_analysis_output_path='./output/log_analysis_results.json', write_analysis_to_file=False):
+def analyze_logs(qlik_script_directory='./input/Script/', log_analysis_output_path='./output/log-analysis-results.json', write_analysis_to_file=False):
     log_analysis_results = []
     
     for file_name in os.listdir(qlik_script_directory):
@@ -54,4 +54,4 @@ def pattern_appears_in_text(regex_pattern, text, ignore_case=False):
         
     return len(matches) > 0
 
-analyze_logs(log_analysis_output_path='./output/log_analysis_results-sample.json', write_analysis_to_file = True)
+analyze_logs(log_analysis_output_path='./output/log-analysis-results-sample.json', write_analysis_to_file = True)
